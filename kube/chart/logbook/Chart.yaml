@@ -1,0 +1,10 @@
+apiVersion: v2
+description: A helm chart for logbook
+name: logbook
+type: application
+version: 1.0.0
+dependencies:
+  - name: mariadb
+    version: ~14.1.4
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled

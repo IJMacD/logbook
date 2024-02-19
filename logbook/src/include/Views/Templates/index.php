@@ -74,7 +74,7 @@ $records = getRecordSettingTracks();
     </tfoot>
 </table>
 <?php
-if (isset($years)) :
+if (isset($years) && count($years)) :
 ?>
     <h2>View extract for year:</h2>
     <?php

@@ -1,0 +1,19 @@
+web:
+  replicaCount: 1
+  repository:
+    image: docker.io/ijmacd/logbook
+    tag: ""
+  ingress:
+    hostname: passage.example.com
+    path: /
+    certName: passage-cert
+  db:
+    name: database_name
+    user: database_user
+  local:
+    enabled: false
+mariadb:
+  enabled: false
+externalDB:
+  enabled: false
+  host:

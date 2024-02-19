@@ -1,0 +1,4 @@
+
+The application has been deployed as "{{ .Release.Name }}".
+
+In a few moments it will be available at https://{{ .Values.web.ingress.hostname }}{{ .Values.web.ingress.path }}

@@ -1,0 +1,25 @@
+web:
+  replicaCount: 1
+  repository:
+    image: k3d-registry.localhost:5111/ijmacd/logbook
+    tag: ""
+  ingress:
+    hostname: passage.localhost
+    path: /
+  db:
+    name: logbook
+    user: logbook_user
+  local:
+    enabled: true
+mariadb:
+  enabled: true
+  auth:
+    database: logbook
+    username: logbook_user
+    existingSecret: logbook-mariadb-auth
+  initdbScriptsConfigMap: logbook-mariadb-init
+  primary:
+    persistence:
+      storageClass: local-path
+externalDB:
+  enabled: false
